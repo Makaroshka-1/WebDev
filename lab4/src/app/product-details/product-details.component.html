@@ -1,0 +1,25 @@
+
+<div *ngIf="product" class="product-details-container">
+    <div class="head-img">
+        
+        <div class="image-container">
+            <h2>
+                {{product.name}}
+            </h2>
+            <img src={{product.image}} alt="phone-image">
+        </div>
+    </div>
+  
+    <div class="details-container">
+        <p> {{product.description}} </p>
+
+        <div class="buttons-container">
+            <button id = "buy-button" (click)="addToCart(product)">Buy</button>
+            <button id = "like-button">&#10084;</button>
+            <button id = "share-button" type="button" (click)="share()">
+                <img src="https://cdn-icons-png.flaticon.com/512/2958/2958783.png" width="10px" height="10px" alt="share-icon">
+            </button>
+    </div>
+
+    </div>
+</div>
