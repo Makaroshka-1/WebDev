@@ -1,0 +1,7 @@
+<div class="liked-item" *ngFor="let item of items">
+    <div class="image-container">
+        <img src={{item.image}} alt="item-image">
+    </div>
+  <div class = "name-container">{{ item.name }}</div>
+  <div class ="price-container">{{ item.price | currency }}</div>
+</div>

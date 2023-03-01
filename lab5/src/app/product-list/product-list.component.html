@@ -1,0 +1,32 @@
+
+<div class="products-container">
+    <div *ngFor="let product of products">
+        
+        <div class="product">
+            <a [routerLink]="['/products', product.id]">
+            <div class="image-container">
+                <img id="product-image" src={{product.image}} alt="phone-image">
+            </div>
+            
+            <p style ="font-size: 15px; text-align: center;">
+                <b>{{ product.name }}</b>
+            <p>
+            </a>
+            
+                <div class="price-rating">
+                    <h4>{{product.price| currency}}</h4>
+                    <div class="rating-container">
+                        <p>&#9733;{{product.rating}}</p>
+                    </div>
+                </div>
+            <div class="buttons-container">
+                    <button id = "buy-button" (click)="addToCart(product)">Buy</button>
+                    <button id = "like-button" (click)="addToLiked(product)">&#10084;</button>
+                    <button id = "share-button" type="button" (click)="share()">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2958/2958783.png" width="10px" height="10px" alt="share-icon">
+                    </button>
+            </div>
+        </div>
+    
+    </div>
+</div>
